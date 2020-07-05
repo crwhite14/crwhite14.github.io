@@ -260,6 +260,7 @@ nav {
   text-align: center;
   text-decoration: none;
   margin: 5px 2px;
+  border-radius: 2px;
 
   background: #007bb5;
   color: white;
