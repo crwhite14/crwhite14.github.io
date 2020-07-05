@@ -253,7 +253,7 @@ nav {
 }
 
 /* fa = font-awesome */
-.fa {
+.fa, .ai {
   padding: 5px;
   font-size: 30px;
   width: 50px;
@@ -265,7 +265,7 @@ nav {
   color: white;
 }
 
-.fa:hover {
+.fa:hover, .ai:hover {
   opacity: 0.7;
 }
 
