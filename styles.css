@@ -1,0 +1,324 @@
+:root {
+  box-sizing: border-box;
+  color: #24242e;
+
+  --hover-color: #ea6227;
+  --site-margin: 0 1em;
+  --site-max-width: 1024px;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+@import url('https://rsms.me/inter/inter.css');
+
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: 'Inter var', sans-serif;
+  }
+}
+
+body {
+  background-color: #e3e4e6;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.004em;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  width: 100%;
+
+  background-color: #24242e;
+
+  display: flex;
+  justify-content: center;
+}
+
+.site-nav {
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: var(--site-max-width);
+
+  margin: var(--site-margin);
+  padding: 0;
+  list-style-type: none;
+
+  display: flex;
+}
+
+.site-nav > li {
+  text-align: center;
+}
+
+.site-nav > li:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.site-nav > li:first-child > a {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.site-nav > li:first-child > a:hover {
+  text-decoration: underline;
+}
+
+.site-nav > li + li {
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+
+.site-nav > li > a {
+  display: block;
+  padding: 0.8em 1em 1.3em;
+  color: white;
+
+  font-size: 0.94rem;
+  text-decoration: none;
+}
+
+.site-nav > li + li > a:hover {
+  background-color: var(--hover-color);
+}
+
+.site-nav > li + li.selected {
+  background-color: var(--hover-color);
+}
+
+
+:root {
+  --grid-template-columns: 1fr;
+  --grid-template-areas:
+      "intro-side"
+      "intro-main"
+      "spacer"
+      "bio-side"
+      "bio-main"
+      "blogs-side"
+      "blogs-main"
+      "papers-side"
+      "papers-main";
+  --grid-gap: 1em;
+
+  --main-wrapper-margin: 0;
+
+  --header-text-align: center;
+  --header-text-indent: inherit;
+  --header-font-size: calc(2rem + 3vw);
+
+  /* Create more vertical space between sections using this margin. */
+  --h2-font-margin-top: 1.7rem;
+  --h2-font-margin-bottom: 0;
+
+  /* In single-col mode, stack the social links on top of the email address. */
+  --social-links-margin-right: 0;
+  --email-display: block;
+
+  --photo-width: 10rem;
+}
+
+@media (min-width: 600px) {
+  :root {
+    --grid-template-columns: 1fr 4fr;
+    --grid-template-areas:
+        "intro-side intro-main"
+        "spacer spacer"
+        "bio-side bio-main"
+        "blogs-side blogs-main"
+        "papers-side papers-main";
+    --grid-gap: 1.5em 3em;
+
+    /* Add bottom margin to create a visual footer. */
+    --main-wrapper-margin: 0 0 24em 0;
+
+    --header-text-align: inherit;
+    --header-text-indent: -0.03em;
+    --header-font-size: 5rem;
+
+    --h2-font-margin-top: 1rem;
+    --h2-font-margin-bottom: inherit;
+
+    --social-links-margin-right: 1.5em;
+    --email-display: inline-block;
+
+    --photo-width: 170px;
+  }
+}
+
+.main-wrapper {
+  background-color: #f4f4f4;
+  padding: 4em 0 6em 0;
+  margin: var(--main-wrapper-margin);
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.main-content {
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: var(--site-max-width);
+
+  margin: var(--site-margin);
+  padding: .4em;
+
+  display: grid;
+  grid-template-columns: var(--grid-template-columns);
+  grid-auto-rows: auto;
+  grid-template-areas: var(--grid-template-areas);
+  grid-gap: var(--grid-gap);
+}
+
+.main-content h2 {
+  margin-top: var(--h2-font-margin-top);
+  margin-bottom: var(--h2-font-margin-bottom);
+  font-size: 1.2rem;
+}
+
+.main-content .text {
+  letter-spacing: 0.005em;
+  line-height: 1.5;
+}
+
+.main-content .text p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.main-content .text a {
+  color: #0972e3;
+  text-decoration: none;
+}
+
+.main-content .text a:hover {
+  color: var(--hover-color);
+  text-decoration: none;
+}
+
+.intro-side {
+  grid-area: intro-side;
+  text-align: var(--header-text-align);
+}
+
+.intro-side img {
+  border-radius: 50%;
+  width: var(--photo-width);
+}
+
+.intro-main {
+  grid-area: intro-main;
+  text-align: var(--header-text-align);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro-main h1 {
+  display: block;
+  margin: 0;
+  font-size: var(--header-font-size);
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 0.9em;
+  text-indent: var(--header-text-indent);
+  color: #010101;
+}
+
+.intro-main .contact {
+  margin-top: 1.5em;
+}
+
+.intro-main .social-links {
+  display: inline-block;
+  margin-right: var(--social-links-margin-right);
+}
+
+.intro-main .email {
+  display: var(--email-display);
+  margin-top: 1em;
+  font-size: 0.9rem;
+  font-family: monospace;
+}
+
+/* fa = font-awesome */
+.fa {
+  padding: 5px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+
+  background: #007bb5;
+  color: white;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.spacer {
+  grid-area: spacer;
+}
+
+.bio-side {
+  grid-area: bio-side;
+}
+
+.bio-main {
+  grid-area: bio-main;
+}
+
+.blogs-side {
+  grid-area: blogs-side;
+}
+
+.blogs-main {
+  grid-area: blogs-main;
+}
+
+.blogs-main ul {
+  padding: 0;
+  list-style: none;
+}
+
+.blogs-main li + li {
+  margin-top: 0.25em;
+}
+
+.papers-side {
+  grid-area: papers-side;
+}
+
+.papers-main {
+  grid-area: papers-main;
+}
+
+.papers-main ul {
+  padding: 0;
+  list-style: none;
+}
+
+.papers-main li + li {
+  margin-top: 1.5rem;
+}
+
+.papers-main li > span {
+  display: block;
+}
+
+.papers-main li > span.aside {
+  font-size: 0.85rem;
+}
