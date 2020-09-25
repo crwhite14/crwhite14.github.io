@@ -104,6 +104,8 @@ nav {
       "spacer"
       "bio-side"
       "bio-main"
+      "news-side"
+      "news-main"
       "blogs-side"
       "blogs-main"
       "papers-side"
@@ -134,6 +136,7 @@ nav {
         "intro-side intro-main"
         "spacer spacer"
         "bio-side bio-main"
+        "news-side news-main"
         "blogs-side blogs-main"
         "papers-side papers-main";
     --grid-gap: 1.5em 3em;
@@ -280,6 +283,23 @@ nav {
 
 .bio-main {
   grid-area: bio-main;
+}
+
+.news-side {
+  grid-area: news-side;
+}
+
+.news-main {
+  grid-area: news-main;
+}
+
+.news-main ul {
+  padding: 0;
+  list-style: none;
+}
+
+.news-main li + li {
+  margin-top: 0.25em;
 }
 
 .blogs-side {
