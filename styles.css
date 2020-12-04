@@ -106,8 +106,6 @@ nav {
       "bio-main"
       "news-side"
       "news-main"
-      "blogs-side"
-      "blogs-main"
       "preprints-side"
       "preprints-main"
       "papers-side"
@@ -139,7 +137,6 @@ nav {
         "spacer spacer"
         "bio-side bio-main"
         "news-side news-main"
-        "blogs-side blogs-main"
         "preprints-side preprints-main"
         "papers-side papers-main";
     --grid-gap: 1.5em 3em;
@@ -302,23 +299,6 @@ nav {
 }
 
 .news-main li + li {
-  margin-top: 0.25em;
-}
-
-.blogs-side {
-  grid-area: blogs-side;
-}
-
-.blogs-main {
-  grid-area: blogs-main;
-}
-
-.blogs-main ul {
-  padding: 0;
-  list-style: none;
-}
-
-.blogs-main li + li {
   margin-top: 0.25em;
 }
 
