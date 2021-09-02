@@ -106,6 +106,8 @@ nav {
       "bio-main"
       "news-side"
       "news-main"
+      "service-side"
+      "service-main"
       "preprints-side"
       "preprints-main"
       "papers-side"
@@ -137,6 +139,7 @@ nav {
         "spacer spacer"
         "bio-side bio-main"
         "news-side news-main"
+        "service-side service-main"
         "preprints-side preprints-main"
         "papers-side papers-main";
     --grid-gap: 1.5em 3em;
@@ -299,6 +302,23 @@ nav {
 }
 
 .news-main li + li {
+  margin-top: 0.25em;
+}
+
+.service-side {
+  grid-area: service-side;
+}
+
+.service-main {
+  grid-area: service-main;
+}
+
+.service-main ul {
+  padding: 0;
+  list-style: none;
+}
+
+.service-main li + li {
   margin-top: 0.25em;
 }
 
