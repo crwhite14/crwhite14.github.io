@@ -106,12 +106,12 @@ nav {
       "bio-main"
       "news-side"
       "news-main"
-      "service-side"
-      "service-main"
       "preprints-side"
       "preprints-main"
       "papers-side"
-      "papers-main";
+      "papers-main"
+      "service-side"
+      "service-main";
   --grid-gap: 1em;
 
   --main-wrapper-margin: 0;
@@ -139,9 +139,9 @@ nav {
         "spacer spacer"
         "bio-side bio-main"
         "news-side news-main"
-        "service-side service-main"
         "preprints-side preprints-main"
-        "papers-side papers-main";
+        "papers-side papers-main"
+        "service-side service-main";
     --grid-gap: 1.5em 3em;
 
     /* Add bottom margin to create a visual footer. */
@@ -305,23 +305,6 @@ nav {
   margin-top: 0.25em;
 }
 
-.service-side {
-  grid-area: service-side;
-}
-
-.service-main {
-  grid-area: service-main;
-}
-
-.service-main ul {
-  padding: 0;
-  list-style: none;
-}
-
-.service-main li + li {
-  margin-top: 0.25em;
-}
-
 .preprints-side {
   grid-area: preprints-side;
 }
@@ -370,4 +353,21 @@ nav {
 
 .papers-main li > span.aside {
   font-size: 0.85rem;
+}
+
+.service-side {
+  grid-area: service-side;
+}
+
+.service-main {
+  grid-area: service-main;
+}
+
+.service-main ul {
+  padding: 0;
+  list-style: none;
+}
+
+.service-main li + li {
+  margin-top: 0.25em;
 }
